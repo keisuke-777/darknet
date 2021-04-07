@@ -56,3 +56,9 @@ uselib
 uselib_track
 darknet
 vcpkg/
+
+# predicted file
+multiple_predict/data/*
+multiple_predict/result/*
+multiple_predict/*.txt
+predictions.jpg
