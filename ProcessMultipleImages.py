@@ -18,7 +18,7 @@ def Predict(train, result):
     train_str = ""
     for jpg_name in jpg_name_list:
         # 画像以外を弾く
-        if re.match(".*\.(jpg|png)", jpg_name):
+        if re.match(r".*\.(jpg|png)$", jpg_name):
             train_str += img_file_path + "/" + jpg_name + "\n"
 
     # train.txtを作成
@@ -91,11 +91,11 @@ def main():
 
 
 if __name__ == "__main__":
-    print(time.strftime("%Y/%m/%d %H:%M", time.strptime(time.ctime())))
+    # print(time.strftime("%Y/%m/%d %H:%M", time.strptime(time.ctime())))
 
     main()
 
-    print(time.strftime("%Y/%m/%d %H:%M", time.strptime(time.ctime())))
+    # print(time.strftime("%Y/%m/%d %H:%M", time.strptime(time.ctime())))
 
     # test1
     # train = "multiple_predict/train.txt"
